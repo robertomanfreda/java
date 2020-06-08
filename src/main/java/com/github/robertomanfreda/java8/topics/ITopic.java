@@ -1,5 +1,6 @@
 package com.github.robertomanfreda.java8.topics;
 
+@FunctionalInterface
 public interface ITopic {
 
     default void exec() {
