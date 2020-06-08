@@ -1,6 +1,9 @@
 package com.github.robertomanfreda.java8.topics.functions;
 
 import com.github.robertomanfreda.java8.topics.ITopic;
+import com.github.robertomanfreda.java8.topics.functions.javautilfunction.ConsumerTest;
+import com.github.robertomanfreda.java8.topics.functions.javautilfunction.PredicateTest;
+import com.github.robertomanfreda.java8.topics.functions.javautilfunction.SupplierTest;
 
 public class Functions implements ITopic {
 
@@ -28,5 +31,17 @@ public class Functions implements ITopic {
 
         String triFunction = new MyTriFunction().apply(1, 2, 3D);
         System.out.println("\ntriFunction: " + triFunction);
+
+        PredicateTest predicateTest = new PredicateTest();
+        System.out.println("\npredicateTest:");
+        predicateTest.test();
+
+        ConsumerTest consumerTest = new ConsumerTest();
+        System.out.println("\nconsumerTest:");
+        consumerTest.test();
+
+        SupplierTest supplierTest = new SupplierTest();
+        System.out.println("\nsupplierTest:");
+        supplierTest.test();
     }
 }
