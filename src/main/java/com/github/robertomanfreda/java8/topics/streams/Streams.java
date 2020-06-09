@@ -49,7 +49,7 @@ public class Streams implements ITopic {
         // Lambda exp
         collected = myList.stream()
                 .filter(integer -> integer < 10)
-                .collect(Collectors.toList());
+                 .collect(Collectors.toList());
         System.out.println("\nCollected list simple filter < 10 - Lambda: \n" + collected.toString());
 
         // Reusing predicate, collecting into set for duplicated removal

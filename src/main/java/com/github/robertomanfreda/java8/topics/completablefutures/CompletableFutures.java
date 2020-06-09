@@ -8,9 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 public class CompletableFutures implements ITopic {
 
-    public CompletableFutures() {
-        postConstruct();
-    }
+	public CompletableFutures() {
+		postConstruct();
+	}
 
     @Override
     public void postConstruct() {
