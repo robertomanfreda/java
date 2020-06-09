@@ -1,6 +1,6 @@
 package com.github.robertomanfreda.java8.topics.completablefutures;
 
-import com.github.robertomanfreda.java8.topics.ITopic;
+import com.github.robertomanfreda.ITopic;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -24,16 +24,7 @@ public class CompletableFutures implements ITopic {
     @Override
     public void exec() {
 
-        CompletableFuture<String> future1 = CompletableFuture.supplyAsync(() -> {
-            try {
-                TimeUnit.SECONDS.sleep(2);
-            } catch (InterruptedException e) {
-                throw new IllegalStateException(e);
-            }
-            return "Risultato dell'operazione asincrona";
-        });
-
-        CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -> {
+        CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
             try {
                 TimeUnit.SECONDS.sleep(2);
             } catch (InterruptedException e) {
@@ -48,7 +39,7 @@ public class CompletableFutures implements ITopic {
         });
 
         try {
-            System.out.println(future1.get());
+            System.out.println(future.get());
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {

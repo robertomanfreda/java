@@ -1,6 +1,6 @@
 package com.github.robertomanfreda.java8.topics.functions;
 
-import com.github.robertomanfreda.java8.topics.ITopic;
+import com.github.robertomanfreda.ITopic;
 import com.github.robertomanfreda.java8.topics.functions.javautilfunction.ConsumerTest;
 import com.github.robertomanfreda.java8.topics.functions.javautilfunction.PredicateTest;
 import com.github.robertomanfreda.java8.topics.functions.javautilfunction.SupplierTest;

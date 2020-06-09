@@ -1,5 +1,7 @@
 package com.github.robertomanfreda.java11;
 
+import com.github.robertomanfreda.java11.varimprovements.VarImprovements;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -7,5 +9,8 @@ public class Main {
         System.out.println("| Java 11 - main features |");
         System.out.println("+-------------------------+");
         System.out.println("Di seguito una serie di esempi delle novità portate dalla versione 11 di Java.");
+
+        VarImprovements varImprovements = new VarImprovements();
+        varImprovements.exec();
     }
 }

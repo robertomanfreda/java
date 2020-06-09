@@ -1,6 +1,6 @@
 package com.github.robertomanfreda.java8.topics.methodreferences;
 
-import com.github.robertomanfreda.java8.topics.ITopic;
+import com.github.robertomanfreda.ITopic;
 import com.github.robertomanfreda.java8.topics.functionalinterfaces.MyFunctionalInterfaceOneParam;
 
 import java.util.function.IntPredicate;
