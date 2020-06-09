@@ -1,6 +1,6 @@
 package com.github.robertomanfreda.java8.topics.foreach;
 
-import com.github.robertomanfreda.java8.topics.ITopic;
+import com.github.robertomanfreda.ITopic;
 
 import java.util.ArrayList;
 import java.util.HashMap;

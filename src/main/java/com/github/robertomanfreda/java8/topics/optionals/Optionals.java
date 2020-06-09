@@ -1,6 +1,6 @@
 package com.github.robertomanfreda.java8.topics.optionals;
 
-import com.github.robertomanfreda.java8.topics.ITopic;
+import com.github.robertomanfreda.ITopic;
 
 import java.util.Optional;
 

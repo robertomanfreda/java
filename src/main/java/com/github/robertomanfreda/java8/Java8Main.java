@@ -1,17 +1,17 @@
 package com.github.robertomanfreda.java8;
 
+import com.github.robertomanfreda.java8.principles.DRY;
+import com.github.robertomanfreda.java8.principles.KISS;
 import com.github.robertomanfreda.java8.principles.YAGNI;
+import com.github.robertomanfreda.java8.topics.completablefutures.CompletableFutures;
 import com.github.robertomanfreda.java8.topics.foreach.ForEach;
 import com.github.robertomanfreda.java8.topics.functionalinterfaces.FunctionalInterfaces;
 import com.github.robertomanfreda.java8.topics.functions.Functions;
 import com.github.robertomanfreda.java8.topics.methodreferences.MethodReference;
-import com.github.robertomanfreda.java8.topics.streams.Streams;
-import com.github.robertomanfreda.java8.principles.DRY;
-import com.github.robertomanfreda.java8.principles.KISS;
-import com.github.robertomanfreda.java8.topics.completablefutures.CompletableFutures;
 import com.github.robertomanfreda.java8.topics.optionals.Optionals;
+import com.github.robertomanfreda.java8.topics.streams.Streams;
 
-public class Main {
+public class Java8Main {
 
     public static void main(String[] args) {
         System.out.println("+------------+");

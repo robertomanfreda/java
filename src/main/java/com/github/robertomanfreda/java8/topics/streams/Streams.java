@@ -1,6 +1,6 @@
 package com.github.robertomanfreda.java8.topics.streams;
 
-import com.github.robertomanfreda.java8.topics.ITopic;
+import com.github.robertomanfreda.ITopic;
 
 import java.util.*;
 import java.util.function.Predicate;

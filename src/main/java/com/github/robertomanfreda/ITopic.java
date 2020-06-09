@@ -1,11 +1,11 @@
-package com.github.robertomanfreda.java8.topics;
+package com.github.robertomanfreda;
 
 @FunctionalInterface
 public interface ITopic {
 
+    void postConstruct();
+
     default void exec() {
         System.out.println("This topic is not implemented...");
     }
-
-    void postConstruct();
 }
