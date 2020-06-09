@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class PredicateTest implements JavaUtilFunction {
+public class PredicateTest implements IJavaUtilFunction {
 
     @Override
     public void test() {

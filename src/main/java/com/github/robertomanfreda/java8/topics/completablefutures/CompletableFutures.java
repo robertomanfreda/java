@@ -16,7 +16,8 @@ public class CompletableFutures implements ITopic {
     public void postConstruct() {
         System.out.println("\n---------- Completable Futures ----------");
         String intro = "Le completable futures tornano utili nella programmazione asincrona." +
-                "Un possibile utilizzo potrebbe essere per le chiamate a servizi: staccando un thread non rimaniamo in attesa della response";
+                "Un possibile utilizzo potrebbe essere per le chiamate a servizi: staccando un thread non " +
+                "rimaniamo in attesa della response";
         System.out.println(intro);
     }
 

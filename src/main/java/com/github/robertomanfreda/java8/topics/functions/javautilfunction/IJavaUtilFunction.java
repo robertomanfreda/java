@@ -1,6 +1,7 @@
 package com.github.robertomanfreda.java8.topics.functions.javautilfunction;
 
-public interface JavaUtilFunctionInterface {
+@FunctionalInterface
+public interface IJavaUtilFunction {
 
-    public void test();
+    void test();
 }
