@@ -1,5 +1,5 @@
-# java8
-Intro repo for java8
+# java
+Intro repo for java 8 - 9 - 10 - 11 - 12 - 13 - 14 
 
 ---
 
@@ -10,6 +10,7 @@ https://github.com/dwmkerr/hacker-laws#principles
 - KISS
 - YAGNI  
 
+---
 
 #### Java 8 main features
 https://education.oracle.com/java-se-8-new-features/courP_4271
@@ -24,6 +25,17 @@ https://education.oracle.com/java-se-8-new-features/courP_4271
 - CompletableFuture
 - Other general improvements about IO, concurrency and core APIs
 
+---
+
+#### Java 9 main features
+**TODO**
+
+---
+
+#### Java 10 main features
+**TODO**
+
+---
 
 #### Java 11 main features
 https://www.oracle.com/technetwork/java/javase/11-relnote-issues-5012449.html
