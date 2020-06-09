@@ -23,3 +23,16 @@ https://education.oracle.com/java-se-8-new-features/courP_4271
 - Optional
 - CompletableFuture
 - Other general improvements about IO, concurrency and core APIs
+
+
+#### Java 11 main features
+https://www.oracle.com/technetwork/java/javase/11-relnote-issues-5012449.html
+
+- JEP 321 HTTP Client (Standard) 
+- Lazy Allocation of Compiler Threads: `-XX:+UseDynamicNumberOfCompilerThreads`
+- ZGC
+- Epsilon GC
+- Introduction of "var" keyword
+- Improved Stream lib
+- Improved String class
+
