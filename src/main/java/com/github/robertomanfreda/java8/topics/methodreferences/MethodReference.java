@@ -2,8 +2,13 @@ package com.github.robertomanfreda.java8.topics.methodreferences;
 
 import com.github.robertomanfreda.java8.topics.ITopic;
 import com.github.robertomanfreda.java8.topics.functionalinterfaces.MyFunctionalInterfaceOneParam;
+import com.sun.jdi.IntegerType;
 
+import java.util.Objects;
+import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.IntPredicate;
+import java.util.function.Predicate;
 
 public class MethodReference implements ITopic {
 
@@ -29,6 +34,11 @@ public class MethodReference implements ITopic {
         MyFunctionalInterfaceOneParam myFunctionalInterfaceOneParam = System.out::println;
         myFunctionalInterfaceOneParam.aVoid("\nI'm called using static method reference");
 
+        ICalculateNumbers myNumber = CalculateNumbers::sum;
+        Integer result = myNumber.sum(2, 3);
+        System.out.println("\nAddition result with static method reference = " + result.toString());
+
+
         // instance method reference
         int initNumber = 10;
         int numberToCheck = 9;
@@ -37,9 +47,19 @@ public class MethodReference implements ITopic {
         boolean test = predicate.test(9);
         System.out.println("\n" + initNumber + " > " + numberToCheck + "? " + test);
 
+
+
+
+
+
         // constructor method reference
         NumberCheckerSupplier supplier = NumberChecker::new;
         NumberChecker checker = supplier.apply(10);
         System.out.println("\nCreated through constructor method reference: \n" + checker.toString());
+
+        ISayHello hi = Hello::new;
+        Hello hello = hi.sayHello("hello constructor method reference!!");
+        System.out.println(hello.toString().toUpperCase());
+
     }
 }
