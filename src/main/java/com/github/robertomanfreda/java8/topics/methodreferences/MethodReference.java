@@ -4,6 +4,7 @@ import com.github.robertomanfreda.ITopic;
 import com.github.robertomanfreda.java8.topics.functionalinterfaces.MyFunctionalInterfaceOneParam;
 
 import java.util.function.IntPredicate;
+import java.util.function.Predicate;
 
 public class MethodReference implements ITopic {
 
@@ -38,9 +39,14 @@ public class MethodReference implements ITopic {
         int initNumber = 10;
         int numberToCheck = 9;
         NumberChecker numberChecker = new NumberChecker(initNumber);
-        IntPredicate predicate = numberChecker::isBigger;
+        Predicate<Integer> predicate = numberChecker::isBigger;
         boolean test = predicate.test(9);
         System.out.println("\n" + initNumber + " > " + numberToCheck + "? " + test);
+
+        String string = " ";
+        Predicate<String> predicate2 = String::isBlank;
+        boolean check = predicate2.test(string);
+        System.out.println("String empty - " + check);
 
 
         // constructor method reference
