@@ -32,6 +32,10 @@ public class Functions implements ITopic {
         String triFunction = new MyTriFunction().apply(1, 2, 3D);
         System.out.println("\ntriFunction: " + triFunction);
 
+        String quadriFunction = new MyQuadryFunction().apply("this", "is", "mixed", "quadrifunction");
+        System.out.println("\nquadriFunction: " + quadriFunction);
+
+
         PredicateTest predicateTest = new PredicateTest();
         System.out.println("\npredicateTest:");
         predicateTest.test();

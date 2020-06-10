@@ -16,8 +16,8 @@ public class PredicateTest implements IJavaUtilFunction {
 
     private List<Integer> findNumbers(List<Integer> integers, Predicate<Integer> predicate) {
         List<Integer> numbersFound = new ArrayList<>();
-        integers.forEach( number -> {
-            if(predicate.test(number)) numbersFound.add(number);
+        integers.forEach(number -> {
+            if (predicate.test(number)) numbersFound.add(number);
         });
         return numbersFound;
     }
