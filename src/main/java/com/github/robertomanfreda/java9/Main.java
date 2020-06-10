@@ -1,7 +1,9 @@
 package com.github.robertomanfreda.java9;
 
+import com.github.robertomanfreda.java9.collectionfactorymethods.CollectionFactoryMethods;
 import com.github.robertomanfreda.java9.completablefutureimprovements.CompletableFutureImprovements;
 import com.github.robertomanfreda.java9.interfaceprivatemethods.InterfacePrivateMethods;
+import com.github.robertomanfreda.java9.streamapiimprovements.StreamApiImprovements;
 
 public class Main {
 
@@ -16,5 +18,11 @@ public class Main {
 
         CompletableFutureImprovements completableFutureImprovements = new CompletableFutureImprovements();
         completableFutureImprovements.exec();
+
+        new CollectionFactoryMethods().exec();
+
+        new StreamApiImprovements().exec();
+
+        new StreamApiImprovements().exec();
     }
 }
