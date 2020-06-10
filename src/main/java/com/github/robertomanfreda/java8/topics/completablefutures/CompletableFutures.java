@@ -45,5 +45,39 @@ public class CompletableFutures implements ITopic {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+
+
+        CompletableFuture<String> cf = new CompletableFuture<String>();
+        try {
+            System.out.println("Sleep for 1 second");
+            TimeUnit.SECONDS.sleep(1);
+            cf.complete("");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("1) Completed? " + cf.isDone());
+
+        CompletableFuture<String> cf2 = new CompletableFuture<String>();
+        System.out.println("2) Completed? " + cf2.isDone());
+
+        CompletableFuture<String> name = CompletableFuture.supplyAsync(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+             return "and .supplyAsync";
+        });
+
+        CompletableFuture<String> saluta = name.thenApply( a -> {
+            return "Hi .thenApply " + a;
+        });
+        try {
+            System.out.println(saluta.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 }
