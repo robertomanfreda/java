@@ -28,12 +28,20 @@ https://education.oracle.com/java-se-8-new-features/courP_4271
 ---
 
 #### Java 9 main features
-**TODO**
+https://www.oracle.com/java/technologies/javase/9all-relnotes.html
+
+- Basically introduced the modular programming
+- Collection Factory
+- Completable Future improvements
+- Stream improvements
 
 ---
 
 #### Java 10 main features
-**TODO**
+https://www.oracle.com/java/technologies/javase/10-relnote-issues.html
+
+- Introduced var keyword
+- Other "minor" changes
 
 ---
 
@@ -51,14 +59,36 @@ https://www.oracle.com/technetwork/java/javase/11-relnote-issues-5012449.html
 ---
 
 #### Java 12 main features
-TODO
+https://www.oracle.com/java/technologies/javase/12all-relnotes.html
+
+- switch (preview)
+- File.mismatch
+- Compact Number Formatting
+- Teeing Collectors
+- improved String class
+- Pattern matching for instanceof (preview)
 
 ---
 
 #### Java 13 main features
-TODO
+https://www.oracle.com/technetwork/java/13-relnote-issues-5460548.html
+
+- Text blocks (preview)
+- introduced yield keywork for switch (preview)
+- switch (preview)
+- ZGC improvements
+- NioSocketImpl API
 
 ---
 
 #### Java 14 main features
-TODO
+https://jdk.java.net/14/release-notes
+
+- Pattern matching for instanceof (preview)
+- Helpful NullPointerExceptions
+- Records (preview)
+- Switch Expressions (Standard)
+- yield (standard)
+- Improved ZGC
+
+---
