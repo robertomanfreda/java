@@ -1,5 +1,7 @@
 package com.github.robertomanfreda.java13;
 
+import com.github.robertomanfreda.java13.switchexpression.SwitchExpression;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,5 +18,7 @@ public class Main {
                 </html>
                 """;
         System.out.println(html);
+
+        new SwitchExpression().exec();
     }
 }
