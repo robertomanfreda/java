@@ -1,5 +1,6 @@
 package com.github.robertomanfreda.java11;
 
+import com.github.robertomanfreda.java11.httpclient.StandardHttpClient;
 import com.github.robertomanfreda.java11.varimprovements.VarImprovements;
 
 public class Main {
@@ -12,5 +13,8 @@ public class Main {
 
         VarImprovements varImprovements = new VarImprovements();
         varImprovements.exec();
+
+        StandardHttpClient standardHttpClient = new StandardHttpClient();
+        standardHttpClient.exec();
     }
 }
