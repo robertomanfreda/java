@@ -82,29 +82,6 @@ https://www.oracle.com/java/technologies/javase/12all-relnotes.html
 ---
 
 #### Java 13 main features
-https://www.oracle.com/technetwork/java/13-relnote-issues-5460548.html
-
-- Text blocks (preview)
-- introduced yield keywork for switch (preview)
-- switch (preview)
-- ZGC improvements
-- NioSocketImpl API
-
----
-
-#### Java 14 main features
-https://jdk.java.net/14/release-notes
-
-- Pattern matching for instanceof (preview)
-- Helpful NullPointerExceptions
-- Records (preview)
-- Switch Expressions (Standard)
-- yield (standard)
-- Improved ZGC
-
----
-
-#### Java 13 main features
 https://openjdk.java.net/projects/jdk/13/
 
 - Dynamic CDS Archives
