@@ -28,12 +28,28 @@ https://education.oracle.com/java-se-8-new-features/courP_4271
 ---
 
 #### Java 9 main features
-**TODO**
+https://docs.oracle.com/javase/9/whatsnew/toc.htm#JSNEW-GUID-0CA9D45F-31BE-4C5A-B85D-8A638B687617
+
+- Module System
+- Encapsulate Most Internal APIs
 
 ---
 
 #### Java 10 main features
-**TODO**
+https://openjdk.java.net/projects/jdk/10/
+
+- Local-Variable Type Inference
+- Consolidate the JDK Forest into a Single Repository
+- Garbage-Collector Interface
+- Parallel Full GC for G1
+- Application Class-Data Sharing
+- Thread-Local Handshakes
+- Remove the Native-Header Generation Tool (javah)
+- Additional Unicode Language-Tag Extensions
+- Heap Allocation on Alternative Memory Devices
+- Experimental Java-Based JIT Compiler
+- Root Certificates
+- Time-Based Release Versioning
 
 ---
 
@@ -48,3 +64,33 @@ https://www.oracle.com/technetwork/java/javase/11-relnote-issues-5012449.html
 - Improved Stream lib
 - Improved String class
 
+
+#### Java 13 main features
+https://openjdk.java.net/projects/jdk/13/
+
+- Dynamic CDS Archives
+- ZGC: Uncommit Unused Memory
+- Reimplement the Legacy Socket API
+- Switch Expressions (Preview)
+- Text Blocks (Preview)
+
+
+#### Java 14 main features
+https://openjdk.java.net/projects/jdk/14/
+
+- Pattern Matching for instanceof (Preview)
+- Packaging Tool (Incubator)
+- NUMA-Aware Memory Allocation for G1
+- JFR Event Streaming
+- Non-Volatile Mapped Byte Buffers
+- Helpful NullPointerExceptions
+- Records (Preview)
+- Switch Expressions (Standard)
+- Deprecate the Solaris and SPARC Ports
+- Remove the Concurrent Mark Sweep (CMS) Garbage Collector
+- ZGC on macOS
+- ZGC on Windows
+- Deprecate the ParallelScavenge + SerialOld GC Combination
+- Remove the Pack200 Tools and API
+- Text Blocks (Second Preview)
+- Foreign-Memory Access API (Incubator)
