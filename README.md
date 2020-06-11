@@ -90,6 +90,7 @@ https://openjdk.java.net/projects/jdk/13/
 - Switch Expressions (Preview)
 - Text Blocks (Preview)
 
+---
 
 #### Java 14 main features
 https://openjdk.java.net/projects/jdk/14/
