@@ -48,3 +48,17 @@ https://www.oracle.com/technetwork/java/javase/11-relnote-issues-5012449.html
 - Improved Stream lib
 - Improved String class
 
+---
+
+#### Java 12 main features
+TODO
+
+---
+
+#### Java 13 main features
+TODO
+
+---
+
+#### Java 14 main features
+TODO
