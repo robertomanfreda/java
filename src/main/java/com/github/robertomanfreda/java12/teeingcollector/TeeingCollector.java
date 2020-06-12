@@ -17,7 +17,10 @@ public class TeeingCollector implements ITopic {
 
     @Override
     public void postConstruct() {
-
+        System.out.println("""
+                
+                Collectors#teeing ritorna un collector a partire da 2 collector e una funzione di merge.
+                """);
     }
 
     @Override
@@ -30,38 +33,8 @@ public class TeeingCollector implements ITopic {
 
     private void example1() {
 
-        class Guest {
-            private String name;
-            private boolean participating;
-            private Integer participantsNumber;
-            public Guest(String name, boolean participating,
-                         Integer participantsNumber) {
-                this.name = name;
-                this.participating = participating;
-                this.participantsNumber = participantsNumber;
-            }
-            public boolean isParticipating() {
-                return participating;
-            }
-            public Integer getParticipantsNumber() {
-                return participantsNumber;
-            }
-        }
-        class EventParticipation {
-            private List<String> guestNameList;
-            private Integer totalNumberOfParticipants;
-            public EventParticipation(List<String> guestNameList,
-                                      Integer totalNumberOfParticipants) {
-                this.guestNameList = guestNameList;
-                this.totalNumberOfParticipants = totalNumberOfParticipants;
-            }
-            @Override
-            public String toString() {
-                return "EventParticipation { " +
-                        "guests = " + guestNameList +
-                        ", total number of participants = " + totalNumberOfParticipants +
-                        " }";
-            }}
+        record Guest(String name, boolean participating, Integer participantsNumber) {}
+        record EventParticipation(List<String> guestNameList, Integer totalNumberOfParticipants) {}
 
         var guests = new ArrayList<Guest>();
         guests.add(new Guest("Marco", true, 3));
@@ -70,9 +43,9 @@ public class TeeingCollector implements ITopic {
         guests.add(new Guest("Lorenzo", true, 15));
 
         var result = guests.stream().collect(Collectors.teeing(
-                Collectors.filtering(guest -> guest.isParticipating(),
+                Collectors.filtering(Guest::participating,
                         Collectors.mapping(guest -> guest.name, Collectors.toList())),
-                Collectors.summingInt(Guest::getParticipantsNumber),
+                Collectors.summingInt(Guest::participantsNumber),
                 EventParticipation::new
 
         ));
@@ -98,20 +71,7 @@ public class TeeingCollector implements ITopic {
 
     private void example3() {
 
-        class Result {
-            private Long count;
-            private Integer sum;
-            public Result(Long count, Integer sum) {
-                this.count = count;
-                this.sum = sum;
-            }
-            @Override
-            public String toString() {
-                return "{" +
-                        "count=" + count +
-                        ", sum=" + sum +
-                        '}';
-            }}
+        record Result(Long count, Integer sum) {}
 
         var numbers = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
         var result =
