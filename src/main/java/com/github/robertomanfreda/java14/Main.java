@@ -1,6 +1,7 @@
 package com.github.robertomanfreda.java14;
 
 import com.github.robertomanfreda.java14.enhancedinstanceof.EnhancedInstanceOf;
+import com.github.robertomanfreda.java14.newswitch.Switch;
 import com.github.robertomanfreda.java14.record.RecordJava14;
 
 public class Main {
@@ -16,5 +17,7 @@ public class Main {
 
         EnhancedInstanceOf enhancedInstanceOf = new EnhancedInstanceOf();
         enhancedInstanceOf.exec();
+
+        new Switch().exec();
     }
 }

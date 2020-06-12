@@ -26,6 +26,36 @@ public class Switch implements ITopic {
             };
             System.out.println(num + " è un numero " + pariDispari);
         });
-        //TODO: Vedere yield
+
+
+        // yield can be used as a keyword to return a value
+
+        // With arrow labels when a full block is needed
+        int num = 3;
+        int returnVal = switch (num) {
+            case 1 -> 1;
+            case 2 -> 2;
+            case 3 -> {
+                System.out.println(3);
+                yield 3;
+            }
+            default -> 0;
+        };
+
+        // Traditional
+        returnVal = switch (num) {
+            case 1:
+                System.out.println(1);
+                yield 1;
+            case 2:
+                System.out.println(2);
+                yield 2;
+            case 3:
+                System.out.println(2);
+                yield 3;
+            default:
+                System.out.println(0);
+                yield 0;
+        };
     }
 }

@@ -3,6 +3,7 @@ package com.github.robertomanfreda.java12;
 import com.github.robertomanfreda.java12.mismatch.Mismatch;
 import com.github.robertomanfreda.java12.numberformats.NumbersFormat;
 import com.github.robertomanfreda.java12.switchexpression.SwitchExpression;
+import com.github.robertomanfreda.java12.teeingcollectors.TeeingCollectors;
 
 public class Main {
 
@@ -17,5 +18,7 @@ public class Main {
         new Mismatch().exec();
 
         new NumbersFormat().exec();
+
+        new TeeingCollectors().exec();
     }
 }
