@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 public class StreamApiImprovements implements ITopic {
 
-    public StreamApiImprovements(){
+    public StreamApiImprovements() {
         postConstruct();
     }
 
@@ -20,11 +20,11 @@ public class StreamApiImprovements implements ITopic {
     public void exec() {
 
         System.out.println("\nStampa finchè non c'è un valore vuoto [\"a\",\"b\",\"\",\"d\"](takeWhile)");
-        Stream.of("a","b","","d").takeWhile(
+        Stream.of("a", "b", "", "d").takeWhile(
                 s -> !s.isEmpty()).forEach(System.out::println);
 
         System.out.println("\nNON stampare finchè non c'è un valore pari a 0 [1,2,3,0,4] (dropWhile)");
-        Stream.of(1,2,3,0,4).dropWhile(
+        Stream.of(1, 2, 3, 0, 4).dropWhile(
                 s -> s != 0).forEach(System.out::println);
     }
 }

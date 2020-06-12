@@ -1,7 +1,5 @@
 package com.github.robertomanfreda.java13;
 
-import com.github.robertomanfreda.java13.niosocket.SocketChannelClient;
-import com.github.robertomanfreda.java13.niosocket.SocketChannelServer;
 import com.github.robertomanfreda.java13.switchexpression.SwitchExpression;
 
 public class Main {

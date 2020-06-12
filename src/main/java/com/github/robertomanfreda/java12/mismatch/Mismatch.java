@@ -8,7 +8,7 @@ import java.nio.file.Path;
 
 public class Mismatch implements ITopic {
 
-    public Mismatch(){
+    public Mismatch() {
         postConstruct();
     }
 
@@ -31,14 +31,14 @@ public class Mismatch implements ITopic {
             Path file2 = Files.writeString(Files.createTempFile("File2", ".txt"), testo);
             long mismatch = Files.mismatch(file1, file2);
             System.out.println(checkMismatch(mismatch) + ", mismatch = " + mismatch);
-            Files.isSameFile(file1,file2);
+            Files.isSameFile(file1, file2);
             file1.toFile().deleteOnExit();
             file2.toFile().deleteOnExit();
 
             System.out.println();
 
-            Path file3 = Files.writeString(Files.createTempFile("File3", ".txt"),"boh");
-            Path file4 = Files.writeString(Files.createTempFile("File4", ".txt"),testo);
+            Path file3 = Files.writeString(Files.createTempFile("File3", ".txt"), "boh");
+            Path file4 = Files.writeString(Files.createTempFile("File4", ".txt"), testo);
             long mismatch2 = Files.mismatch(file3, file4);
             System.out.println(checkMismatch(mismatch2) + ", mismatch = " + mismatch2);
             file3.toFile().deleteOnExit();
@@ -49,8 +49,8 @@ public class Mismatch implements ITopic {
         }
     }
 
-    private String checkMismatch(Long mismatch){
-        if(mismatch == -1)
+    private String checkMismatch(Long mismatch) {
+        if (mismatch == -1)
             return "File uguali";
         else
             return "File diversi";

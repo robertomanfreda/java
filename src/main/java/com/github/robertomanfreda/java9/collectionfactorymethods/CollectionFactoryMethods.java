@@ -3,13 +3,12 @@ package com.github.robertomanfreda.java9.collectionfactorymethods;
 import com.github.robertomanfreda.ITopic;
 
 import java.util.List;
-import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
 
 public class CollectionFactoryMethods implements ITopic {
 
-    public CollectionFactoryMethods(){
+    public CollectionFactoryMethods() {
         postConstruct();
     }
 
@@ -26,7 +25,7 @@ public class CollectionFactoryMethods implements ITopic {
     @Override
     public void exec() {
         System.out.println("\n");
-        List<String> list = List.of("Java","C", "Python", "Ruby");
+        List<String> list = List.of("Java", "C", "Python", "Ruby");
         System.out.println("Lista dichiarata evitando il metodo .add();\n" +
                 "List<String> list = List.of(\"Java\",\"C\", \"Python\", \"Ruby\");");
         list.forEach(System.out::println);
@@ -34,7 +33,7 @@ public class CollectionFactoryMethods implements ITopic {
 
         System.out.println("\nSet dichiarato evitando il metodo .add();\n" +
                 " Set<Integer> set = Set.of(1,2,3,4);");
-        Set<Integer> set = Set.of(1,2,3,4);
+        Set<Integer> set = Set.of(1, 2, 3, 4);
         set.forEach(System.out::println);
 
         System.out.println("\nMap dichiarata evitando il metodo .put();\n" +

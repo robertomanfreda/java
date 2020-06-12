@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class StringMethods implements ITopic {
 
-    public StringMethods(){
+    public StringMethods() {
         postConstruct();
     }
 
@@ -34,7 +34,7 @@ public class StringMethods implements ITopic {
         System.out.println(blank.lines().collect(Collectors.toList()));
 
         System.out.println("\n** var in lambda expression ");
-        Map map = Map.of(1,"one", 2, "two", 3, "three");
+        Map map = Map.of(1, "one", 2, "two", 3, "three");
         map.forEach((var key, var value) -> System.out.println("Key: " + key + "| Value: " + value));
 
 

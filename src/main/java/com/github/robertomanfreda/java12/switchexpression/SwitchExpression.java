@@ -4,7 +4,7 @@ import com.github.robertomanfreda.ITopic;
 
 public class SwitchExpression implements ITopic {
 
-    public SwitchExpression(){
+    public SwitchExpression() {
         postConstruct();
     }
 
@@ -26,7 +26,7 @@ public class SwitchExpression implements ITopic {
         System.out.println(defaultCase);
     }
 
-    private String doSwitch(int number){
+    private String doSwitch(int number) {
         String string = switch (number) {
             case 1, 2 -> string = "Value: case " + number;
             default -> string = "Value: default";

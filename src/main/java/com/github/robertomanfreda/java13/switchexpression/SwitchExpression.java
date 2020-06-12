@@ -4,7 +4,7 @@ import com.github.robertomanfreda.ITopic;
 
 public class SwitchExpression implements ITopic {
 
-    public SwitchExpression(){
+    public SwitchExpression() {
         postConstruct();
     }
 

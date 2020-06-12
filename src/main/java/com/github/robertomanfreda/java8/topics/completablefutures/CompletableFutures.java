@@ -66,10 +66,10 @@ public class CompletableFutures implements ITopic {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-             return "and .supplyAsync";
+            return "and .supplyAsync";
         });
 
-        CompletableFuture<String> saluta = name.thenApply( a -> {
+        CompletableFuture<String> saluta = name.thenApply(a -> {
             return "Hi .thenApply " + a;
         });
         try {

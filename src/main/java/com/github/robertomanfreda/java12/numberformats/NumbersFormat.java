@@ -7,7 +7,7 @@ import java.util.Locale;
 
 public class NumbersFormat implements ITopic {
 
-    public NumbersFormat(){
+    public NumbersFormat() {
         postConstruct();
     }
 
@@ -26,9 +26,9 @@ public class NumbersFormat implements ITopic {
         compactNumberFormatting(2000000000);
     }
 
-    private static void compactNumberFormatting(final long numberToFormat){
+    private static void compactNumberFormatting(final long numberToFormat) {
         final NumberFormat nfDefault = NumberFormat.getCompactNumberInstance();
-        final NumberFormat nfItShort =  NumberFormat.getCompactNumberInstance(Locale.ITALY, NumberFormat.Style.SHORT);
+        final NumberFormat nfItShort = NumberFormat.getCompactNumberInstance(Locale.ITALY, NumberFormat.Style.SHORT);
         final NumberFormat nfItLong = NumberFormat.getCompactNumberInstance(Locale.ITALY, NumberFormat.Style.LONG);
         final NumberFormat nfFrShort = NumberFormat.getCompactNumberInstance(Locale.US, NumberFormat.Style.SHORT);
         final NumberFormat nfFrLong = NumberFormat.getCompactNumberInstance(Locale.US, NumberFormat.Style.LONG);
