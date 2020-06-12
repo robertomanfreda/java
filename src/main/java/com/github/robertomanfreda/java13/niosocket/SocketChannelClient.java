@@ -1,30 +1,37 @@
 package com.github.robertomanfreda.java13.niosocket;
 
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.UnknownHostException;
 
 public class SocketChannelClient {
 
-    public static void main(String[] args) {
-
-        try (ServerSocket serverSocket = new ServerSocket(8888)){
-
-            boolean running = true;
-            while(running){
-                System.out.println("********* andare su localhost:8888 ********");
-                Socket clientSocket = serverSocket.accept();
-                System.out.println("Client connesso = " + clientSocket.isConnected());
-                System.out.println(clientSocket.getRemoteSocketAddress());
-                running = false;
-                clientSocket.close();
-                System.out.println(clientSocket.isClosed());
-
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
+    public static void startClient() throws UnknownHostException, IOException, ClassNotFoundException, InterruptedException{
+        //get the localhost IP address, if server is running on some other IP, you need to use that
+        InetAddress host = InetAddress.getLocalHost();
+        Socket socket = null;
+        ObjectOutputStream oos = null;
+        ObjectInputStream ois = null;
+        for(int i=0; i<5;i++){
+            //establish socket connection to server
+            socket = new Socket(host.getHostName(), 8888);
+            //write to socket using ObjectOutputStream
+            oos = new ObjectOutputStream(socket.getOutputStream());
+            System.out.println("Sending request to Socket Server");
+            if(i==4)oos.writeObject("exit");
+            else oos.writeObject(""+i);
+            //read the server response message
+            ois = new ObjectInputStream(socket.getInputStream());
+            String message = (String) ois.readObject();
+            System.out.println("Message: " + message);
+            //close resources
+            ois.close();
+            oos.close();
+            Thread.sleep(100);
         }
-
     }
 }
