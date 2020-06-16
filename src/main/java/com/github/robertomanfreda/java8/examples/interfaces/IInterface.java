@@ -8,7 +8,7 @@ public interface IInterface {
         System.out.println("impl");
     }
 
-    default void defaultMethodsNeedsImplementationButCanOverride() {
+    default void defaultMethodsNotNeedsImplementationButCanOverride() {
         System.out.println("impl");
     }
 }

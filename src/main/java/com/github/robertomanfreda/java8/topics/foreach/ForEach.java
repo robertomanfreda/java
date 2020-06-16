@@ -34,6 +34,11 @@ public class ForEach implements ITopic {
         myList.add("1");
         myList.add("2");
 
+        // classic
+        for (String el : myList) {
+            System.out.println("forEach anonymous class: " + el);
+        }
+
         // with anonymous class
         System.out.println("\n");
         myList.forEach(new Consumer<String>() {

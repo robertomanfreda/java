@@ -34,6 +34,10 @@ public class Streams implements ITopic {
         myList.add(11);
         myList.add(12);
 
+        // reduce
+        Integer sum = myList.stream().reduce(0, Integer::sum);
+        System.out.println("\nSum of a list with reduce: " + sum);
+
         // Filtering
         // Anonymous class
         List<Integer> collected = myList.stream()
@@ -66,6 +70,7 @@ public class Streams implements ITopic {
         people.add(new Person("bat", "baz"));
         people.add(new Person("batbat", "bazbaz"));
 
+        System.out.println("\nName length Person filter < 5 : \n" + set.toString());
         people.stream()
                 .filter(person -> person.getName().length() < 5)
                 .map(Person::getSurname)
@@ -99,6 +104,18 @@ public class Streams implements ITopic {
         // Iterating map
         System.out.println("\n");
         aMap.forEach((key, value) -> System.out.println("Key: " + key + " - Value: " + value));
+
+        Map<String, Double> aMap2 = new HashMap<>();
+        aMap2.put("ciao", 0.0);
+        aMap2.put("CIAO", 1.0);
+        aMap2.put("Va bene", 2.0);
+        aMap2.put("foo", 3.0);
+
+
+        Map<String,Double> wmap = new HashMap<>();
+        aMap2.forEach((s,i) -> wmap.merge(s.toLowerCase(), i, Double::sum));
+        aMap2.forEach((key, value) -> System.out.println("Funzione merge: " + key + " - Value: " + value));
+
     }
 
     private static class Person {

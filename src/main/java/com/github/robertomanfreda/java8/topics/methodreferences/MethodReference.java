@@ -3,6 +3,9 @@ package com.github.robertomanfreda.java8.topics.methodreferences;
 import com.github.robertomanfreda.ITopic;
 import com.github.robertomanfreda.java8.topics.functionalinterfaces.MyFunctionalInterfaceOneParam;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 public class MethodReference implements ITopic {
@@ -47,6 +50,10 @@ public class MethodReference implements ITopic {
         boolean check = predicate2.test(string);
         System.out.println("String empty - " + check);
 
+        String foo = "hello";
+        BiPredicate<String, String> preticate3 = String::equals;
+        System.out.println("\"hello\" is palindrome?"
+                + preticate3.test(foo, (new StringBuilder(foo).reverse()).toString()));
 
         // constructor method reference
         NumberCheckerSupplier supplier = NumberChecker::new;
@@ -57,5 +64,9 @@ public class MethodReference implements ITopic {
         Hello hello = hi.sayHello("hello constructor method reference!!");
         System.out.println(hello.toString().toUpperCase());
 
+    }
+
+    public Double average(List<Integer> list) {
+        return Double.valueOf(list.stream().reduce(0, Integer::sum));
     }
 }
