@@ -15,7 +15,8 @@ public class CompletableFutureImprovements implements ITopic {
     @Override
     public void postConstruct() {
         System.out.println("\nSono stati introdotti nuovi metodi per la CompletableFuture.\n" +
-                "I più significativi riguardano i timeout, nello specifico CompletableFuture#orTimeout e CompletableFuture#completeOnTimeout");
+                "I più significativi riguardano i timeout, nello specifico CompletableFuture#orTimeout e" +
+                " CompletableFuture#completeOnTimeout");
     }
 
     @Override
@@ -38,12 +39,16 @@ public class CompletableFutureImprovements implements ITopic {
             }
             return "Risultato dell'operazione asincrona 2";
         });
-
+        // Completa il "CompletableFuture" con eccezione se non viene completato entro i secondi passi in innput
         CompletableFuture<String> orTimeoutFuture = future1.orTimeout(4, TimeUnit.SECONDS);
-        CompletableFuture<String> completeOnTimeoutFuture = future2.completeOnTimeout("CompletableFuture#completeOnTimeout: valore in caso di timeout", 7, TimeUnit.SECONDS);
+        // Completa il "CompletableFuture" con un valore passato in input
+        // se non viene completato entro i secondi passi in innput
+        CompletableFuture<String> completeOnTimeoutFuture = future2.completeOnTimeout(
+                "CompletableFuture#completeOnTimeout: valore in caso di timeout", 7, TimeUnit.SECONDS);
 
         try {
-            System.out.println("La seguente eccezione è volontaria, per testare il nuovo metodo CompletableFuture#orTimeout\nCompletableFuture#orTimeout: ");
+            System.out.println("La seguente eccezione è volontaria, per testare il nuovo metodo " +
+                    "CompletableFuture#orTimeout\nCompletableFuture#orTimeout: ");
             System.out.println(orTimeoutFuture.get());
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();

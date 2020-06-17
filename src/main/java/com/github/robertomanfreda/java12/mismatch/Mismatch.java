@@ -18,7 +18,7 @@ public class Mismatch implements ITopic {
                 " differenza nei seguenti scenari:\nSe i byte non sono identici. In questo caso, viene restituita la" +
                 " posizione del primo byte non corrispondente.\nLe dimensioni dei file non sono identiche. " +
                 "In questo caso, viene restituita la dimensione del file più piccolo. Per la tabella dei risultati vedere:" +
-                "\nhttps://dzone.com/articles/jdk-12s-filesmismatch-method#:~:text=mismatch%20method%20for%20comparing%20files,time%2C%20of%20adding%20a%20Files.";
+                "\n https://dzone.com/articles/jdk-12s-filesmismatch-method#:~:text=mismatch%20method%20for%20comparing%20files,time%2C%20of%20adding%20a%20Files.";
         System.out.println(intro);
     }
 

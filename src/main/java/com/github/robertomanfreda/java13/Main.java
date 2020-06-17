@@ -1,5 +1,7 @@
 package com.github.robertomanfreda.java13;
 
+import com.github.robertomanfreda.java13.niosocket.SocketChannelClient;
+import com.github.robertomanfreda.java13.niosocket.SocketChannelServer;
 import com.github.robertomanfreda.java13.switchexpression.SwitchExpression;
 
 public class Main {
@@ -21,8 +23,8 @@ public class Main {
 
         new SwitchExpression().exec();
 // LANCIARE PRIMA SocketServer e poi SocketClient
-//        new SocketChannelServer();
+//        SocketChannelServer.startServer();
 //
-//        new SocketChannelClient();
+//        SocketChannelClient.starClient();
     }
 }

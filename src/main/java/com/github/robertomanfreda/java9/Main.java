@@ -23,6 +23,5 @@ public class Main {
 
         new StreamApiImprovements().exec();
 
-        new StreamApiImprovements().exec();
     }
 }

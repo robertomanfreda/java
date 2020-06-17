@@ -40,6 +40,7 @@ public class Optionals implements ITopic {
         System.out.println(optionalOfNullable1.orElse("L'optional optionalOfNullable1 non contiene un valore"));
 
         // non null optional
+        // Ritorna un Optional con valore anche se stiamo usando il metodo "ofNullable"
         Optional<String> optionalOfNullable2 = Optional.ofNullable("Valore di optionalOfNullable2");
         System.out.println(optionalOfNullable2.orElse("L'optional optionalOfNullable2 non contiene un valore"));
 
