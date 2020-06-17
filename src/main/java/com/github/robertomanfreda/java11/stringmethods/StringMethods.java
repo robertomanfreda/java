@@ -16,7 +16,7 @@ public class StringMethods implements ITopic {
 
     @Override
     public void postConstruct() {
-        String intro = "Sono stati aggiunti nuovi metodi alla classe String";
+        String intro = "\n** Sono stati aggiunti nuovi metodi alla classe String\n";
         System.out.println(intro);
     }
 
@@ -34,7 +34,8 @@ public class StringMethods implements ITopic {
         System.out.println(blank.lines().collect(Collectors.toList()));
 
         System.out.println("\n** var in lambda expression ");
-        Map map = Map.of(1, "one", 2, "two", 3, "three");
+        // Non aggiunge nulla di nuovo, da Java 8 "var" è implicito
+        Map map = Map.of(1, "one", 2, "two", 3, 2);
         map.forEach((var key, var value) -> System.out.println("Key: " + key + "| Value: " + value));
 
 

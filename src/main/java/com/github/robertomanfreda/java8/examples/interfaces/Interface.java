@@ -7,7 +7,7 @@ public class Interface implements IInterface {
     }
 
     @Override
-    public void defaultMethodsNotNeedsImplementationButCanOverride() {
+    public void defaultMethodsNeedsImplementationButCanOverride() {
         System.out.println("Override");
     }
 }
